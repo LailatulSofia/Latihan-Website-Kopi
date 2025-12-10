@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - Kopi Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+<!-- CSS Bootstrap -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+        <!-- JS Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <header>
+        <h1>Kopi Nusantara</h1>
+        <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Profil Usaha Kami</h2>
+            <p> Berdiri sejak tahun <strong>2015</strong>, Kopi Nusantara berkomitmen menghadirkan cita rasa terbaik dari berbagai daerah di Indonesia. Kami bekerja sama langsung dengan petani kopi lokal untuk memastikan setiap biji kopi sampai ke tangan Anda dalam kualitas terbaik; segar, aromatik, dan penuh karakter.</p>
+        </section>
+
+        <section>
+            <h3>Produk Unggulan</h3>
+            <ul class="fitur-list">
+                <li>Kopi Arabika Gayo</li>
+                <li>Kopi Robusta Temanggung</li>
+                <li>Kopi Liberika Riau </li>
+            </ul>
+        </section>
+
+        <section class="galeri">
+            <div class="card">
+                <img src="images/kopiarabikagayo" alt="Proses sangrai kopi">
+                <p><strong>Kopi Arabika Gayo</strong></p>
+                <p>Kopi Arabika Gayo dari dataran tinggi Aceh dengan aroma floral dan rasa asam yang lembut.</p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+            </div>
+            <div class="card">
+                <img src="images/kopirobustatemanggung" alt="Kemasan produk kopi">
+                <p><strong>Kopi Robusta Temanggung</strong></p>
+                <p>Kopi Robusta Temanggung dengan cita rasa pahit manis khas pegunungan Jawa Tengah.</p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+            </div>
+            <div class="card">
+                <img src="images/kopiliberikariau" alt="Kemasan produk kopi">
+                <p><strong>Kopi Liberika Riau</strong></p>
+                <p>Kopi Liberika Riau dengan aroma unik dan rasa bold yang sedikit fruity.</p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+            </div>
+
+            <script>
+                const produk = [
+                    {rating: 4.5, IndexCard: 0},
+                    {rating: 4, IndexCard: 1},
+                    {rating: 5, IndexCard: 2}
+                ];
+
+                // Ambil semua elemen rating
+                const ratingElements = document.querySelectorAll('.hasil-rating');
+
+                produk.forEach((item, index) => {
+                    let teksRating = '';
+                    if (item.rating >= 4.5){
+                        teksRating = "★★★★★ Sangat Disarankan";
+                    } else if (item.rating >= 3) {
+                        teksRating = "★★★ Rekomendasi Biasa";
+                    } else {
+                        teksRating = "★ Tidak Direkomendasikan";
+                    }
+
+                    // Set rating ke elemen yang sesuai
+                    ratingElements[item.IndexCard].textContent = teksRating;
+                });
+            </script>
+        </section>
+
+        <section id="testimoni">
+            <h3>Testimoni Pelanggan</h3>
+            <ul id="list-testimoni"></ul>
+        </section>
+
+        <script>
+            const testimoni = [
+                "Kopi Arabika Gayo sangat harum dan nikmat!",
+                "Robusta Temanggung enak dan mudah diseduh.",
+                "Liberika Riau rasanya unik dan bold!",
+                "Pelayanan cepat dan ramah, puas!",
+                "Harga terjangkau, kualitas tetap oke!"
+            ];
+
+            const listTestimoni = document.getElementById("list-testimoni");
+
+            testimoni.forEach(function(item){
+                let li = document.createElement("li");
+                li.textContent = item;
+                listTestimoni.appendChild(li);
+            });
+        </script>
+
+        <section>
+            <h3>Layanan Unggulan : </h3>
+            <ul id="layanan-list"></ul>
+            
+
+            <script>
+                let layanan = ["Gratis Ongkir","Bayar di Tempat","Garansi 30 hari"];
+
+                layanan.forEach(function(item){
+                    let li = document.createElement("li");
+                    li.textContent = item;
+                    document.getElementById("layanan-list").appendChild(li);
+                });
+            </script>
+        </section>
+
+        <section>
+            <h3>Form Pemesanan</h3>
+            <form onsubmit="return cekform()">
+                <label for="namaProduk">Pilih produk: </label>
+                <select id="namaProduk">
+                    <option value="Kopi Arabika Gayo">Kopi Arabika Gayo</option>
+                    <option value="Kopi Robusta Temanggung">Kopi Robusta Temanggung</option>
+                    <option value="Kopi Liberika Riau">Kopi Liberika Riau</option>
+                </select><br>
+
+                <label for="jumlah">Masukan jumlah yang ingin dipesan: </label>
+                <input type="number" id="jumlah" placeholder="Jumlah"><br>
+
+                <button type="submit">Pesan</button>
+            </form>
+
+            <script>
+                
+                function cekform() {
+                    let nama = document.getElementById("namaProduk").value;
+                    let jumlah = document.getElementById("jumlah").value;
+
+                    if (nama === "" || jumlah === "") {
+                        alert("Semua kolom wajib diisi.");
+                        return false; // mencegah submit
+                    }
+
+                    if (jumlah <= 0) {
+                        alert("Jumlah harus lebih dari 0!");
+                        return false; // mencegah submit
+                    }
+
+                    // Alert berhasil
+                    alert("Pemesanan berhasil dikirim!\nNama produk: " + nama + "\nJumlah: " + jumlah);
+
+                    return false; // tetap mencegah reload supaya alert terlihat
+                }
+            </script>
+        </section>
+
+
+        <section>
+            <h3>Cek Kategori Usia</h3>
+            <label for="usia">Masukkan usia Anda:</label>
+            <input type="number" id="usia" placeholder="Usia"><br>
+
+            <button onclick="cekUsia()">Cek Kategori</button>
+            <p id="kategori"></p>
+
+            <script>
+                function cekUsia() {
+                    let usia = document.getElementById("usia").value;
+                    let kategori = "";
+
+                    if (usia < 13) {
+                        kategori = "Anak-anak";
+                    } else if (usia >= 13 && usia <= 17) {
+                        kategori = "Remaja";
+                    } else if (usia >= 18 && usia <= 60) {
+                        kategori = "Dewasa";
+                    } else if (usia > 60) {
+                        kategori = "Lansia";
+                    } else {
+                        kategori = "Input tidak valid";
+                    }
+
+                    document.getElementById("kategori").textContent = "Kategori: " + kategori;
+                }
+            </script>
+        </section>
+
+        
+
+        <section>
+            <h3>Kunjungi Kami</h3>
+            <p>
+                Ikuti kisah dan aktivitas kami di media sosial:<br>
+                <a href="https://instagram.com/kopinusantara" target="_blank">
+                    📷 Instagram Kopi Nusantara
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kopi Nusantara. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>

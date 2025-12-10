@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk - UMKM Kopi Nusantara</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="js/form.js"></script>
+  <script type="module" src="js/newsletter.js"></script>
+  <script type="module" src="js/utils.js"></script>
+<!-- CSS Bootstrap -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+        <!-- JS Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+<body>
+    <header>
+        <h1>Kopi Nusantara</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Hubungi Kami</h2>
+        <p>Silahkan isi folmulir berikut untuk menghubungi tim Kopi Nusantara:</p><br>
+        <form id="formKontak" action="#" method="post">
+            <label for="nama">Nama :</label>
+            <input type="text" id="nama" name="nama"/>
+            <span class="error" id="errorNama"></span><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email"/>
+            <span class="error" id="errorEmail"></span><br>
+
+            <label for="hp">Nomor HP :</label>
+            <input type="text" id="hp" name="hp">
+            <span class="error" id="errorNoHp"></span><br>
+
+            <label for="kategori">Kategori Pesan:</label>
+            <select name="kategori" id="kategori">
+            <option value="umum">Umum</option>
+            <option value="produk">Produk</option>
+            <option value="kerja sama">Kerja Sama</option>
+            </select>
+            <span class="error" id="errorKategori"></span><br><br>
+
+            <label for="tgl">Tanggal Pengiriman Pesan:</label>
+            <input type="date" name="tgl" id="tgl"><br>
+            <span class="error" id="errorTgl"></span><br>
+
+            <label for="pesan">Pesan :</label>
+            <textarea name="pesan" id="pesan" rows="5" cols="30"></textarea><br>
+            <span class="error" id="errorPesan"></span>
+
+            <label for="file">Upload Gambar/Document :</label>
+            <input type="file" name="file" id="file"><br><br>
+
+            <p><strong>Silakan pilih jenis kelamin Anda:</strong></p>
+            <label><input type="radio" name="gender" value="pria" id="pria"> Pria</label>
+            <label><input type="radio" name="gender" value="wanita" id="wanita"> Wanita</label><br>
+
+            <label for="langganan">
+                <input type="checkbox" id="langganan" name="langganan" value="ya">Saya ingin menerima newsletter
+            </label><br>
+
+            <p id="errorMsg" style="color:red;"></p>
+
+            <button type="submit">Kirim</button>
+            <button type="button" id="clearButton">Clear Data</button>
+        
+            <p id="errorMsg" style="color: red; font-weight: bold;"></p>
+            <p id="successMsg" style="color: green; font-weight: bold;"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kopi Nusantara</p>
+    </footer>
+
+    <script src="scriptkontak.js"></script>
+</body>
+</html>

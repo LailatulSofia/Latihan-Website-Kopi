@@ -1,0 +1,353 @@
+body {
+    font-family: 'Trocchi', serif;
+    background-color: #e9e1cf;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2d1607;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    background-color: #543b27;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold, 600;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-grow: 0.75;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f9c27a;
+    border-bottom: 2px solid #f9c27a;
+}
+
+h2 {
+    color: #2d1607;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+footer {
+    background-color: #2d1607;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(o,o,o,o.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #2d1607;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #795a43;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo img{
+    height: 100px;
+    width: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.galeri {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #e9e1cf;
+}
+
+.galeri .card {
+    background-color: #fff8f0;
+    border: 1px solid #d6bfa5;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(90, 50, 30, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(90, 50, 30, 0.2);
+}
+
+.galeri .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #c8b8a8;
+}
+
+.galeri .card p {
+    padding: 12px;
+    color: #3b2b27;
+    font-family: 'Trocchi', serif;
+    font-size: 1rem;
+}
+
+.hero {
+    background: linear-gradient(to bottom, #543b27, #e9e1cf);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.keunggulan, .testimoni {
+    padding: 40px 0;
+    background-color: #e9e1cf;
+}
+
+.fitur-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fitur-list li {
+    margin-bottom: 10px;
+    background: #e8ebee;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.testimoni .card {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid #98774b;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #f9f3e6;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(90, 50, 30, 0.1);
+}
+
+.kontak-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Trocchi', serif;
+    color: #3b2b27;
+}
+
+.kontak-form input,
+.kontak-form select,
+.kontak-form textarea {
+    padding: 10px;
+    border: 1px solid #c8b8a8;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-kirim,
+.btn-reset {
+    background-color: #7b1a05;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-reset {
+    background-color: #c48a64;
+}
+
+.btn-kirim:hover {
+    background-color: #5a1003;
+}
+
+.btn-reset:hover {
+    background-color: #a06b4d;
+}
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .galeri {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
