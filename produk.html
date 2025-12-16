@@ -1,136 +1,305 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produk - UMKM Kopi Nusantara</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- CSS Bootstrap -->
-  <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  />
-        <!-- JS Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk - UMKM Kopi Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <header>
-    <h1>Kopi Nusantara</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <main>
-    <h2>Produk Unggulan Kami</h2>
-    <p>Berikut daftar produk kopi Nusantara yang kami sediakan:</p>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <table border="1" cellspacing="0" cellpadding="8">
-      <thead>
-        <tr>
-          <th>Produk</th>
-          <th>Ukuran</th>
-          <th>Harga</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Kopi Arabika Gayo</td>
-          <td>250g</td>
-          <td>Rp 45.000</td>
-        </tr>
-        <tr>
-          <td>Kopi Robusta Temanggung</td>
-          <td>250g</td>
-          <td>Rp 38.000</td>
-        </tr>
-        <tr>
-          <td>Kopi Liberika Riau</td>
-          <td>250g</td>
-          <td>Rp 42.000</td>
-        </tr>
-        <tr>
-          <td colspan="3" style="text-align: center; background-color: #eee;">
-            Semua harga sudah termasuk PPN
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
 
-    <br>
+  <body>
+    <header>
+      <h1>Kopi Nusantara</h1>
+      <nav class="navbar navbar-expand-lg" style="background-color: #532a10;">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center text-white" href="index.html"></a>
+                    <img src="images/logo.jpg" alt="Logo Kopi Nusantara" class="logo-navbar me-2">
+                    <span>   UMKM Kopi Nusantara</span>
+          <button
+            class="navbar-toggler text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+          </button>
 
-    <table border="1" cellspacing="0" cellpadding="5">
-  <thead>
-    <tr>
-      <th>Produk</th>
-      <th>Ukuran</th>
-      <th>Harga</th>
-      <th>Jenis Kopi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Kopi Arabika Gayo</td>
-      <td>250g</td>
-      <td>45000</td>
-      <td rowspan="2">Arabika</td>
-    </tr>
-    <tr>
-      <td>Kopi Arabika Petungkriyono</td>
-      <td>300g</td>
-      <td>48500</td>
-    </tr>
-    <tr>
-      <td>Kopi Robusta Batang</td>
-      <td>250g</td>
-      <td>46000</td>
-      <td rowspan="3">Robusta</td>
-    </tr>
-    <tr>
-      <td>Kopi Robusta Temanggung</td>
-      <td>250g</td>
-      <td>38000</td>
-    </tr>
-    <tr>
-      <td>Kopi Robusta Linggoasri</td>
-      <td>225g</td>
-      <td>35000</td>
-    </tr>
-    <tr>
-      <td>Kopi Liberika Riau</td>
-      <td>250g</td>
-      <td>42000</td>
-      <td>Liberika</td>
-    </tr>
-    <tr>
-      <td colspan="4" style="text-align:center;">
-        Semua harga sudah termasuk PPN
-      </td>
-    </tr>
-  </tbody>
-</table>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto d-flex gap-3">
+              <li class="nav-item">
+                <a class="nav-link text-white fw-semibold custom-nav" href="index.html"
+                  >Beranda</a
+                >
+              </li>
 
-    <h3>Profil Produk</h3>
-    <img src="images/kemasan.png" alt="Kemasan Kopi Arabika" width="100%" />
-    <p>Kopi ini berasal dari dataran tinggi Gayo, memiliki cita rasa asam segar dan aroma khas.</p>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-semibold custom-nav" href="tentang.html"
+                  >Tentang</a
+                >
+              </li>
 
-    <h3>Dengarkan Cerita Kami</h3>
-    <audio controls>
-      <source src="audio/cerita-umkm.mp3" type="audio/mpeg" />
-      Audio tidak tersedia di browser Anda.
-    </audio>
-  </main>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-semibold custom-nav" href="produk.html"
+                  >Produk</a
+                >
+              </li>
 
-  <footer>
-    <p>&copy; 2025 Kopi Nusantara</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
+              <li class="nav-item">
+                <a class="nav-link text-white fw-semibold custom-nav" href="galeri.html"
+                  >Galeri</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white fw-semibold custom-nav" href="kontak.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Produk Unggulan Kami</h2>
+      <section class="box"> 
+
+      <p>Berikut daftar produk kopi Nusantara yang kami sediakan:</p>
+
+      <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+          <tr>
+            <th>Produk</th>
+            <th>Ukuran</th>
+            <th>Harga</th>
+            <th>Jenis Kopi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kopi Arabika Gayo</td>
+            <td>250g</td>
+            <td>45000</td>
+            <td rowspan="2">Arabika</td>
+          </tr>
+          <tr>
+            <td>Kopi Arabika Petungkriyono</td>
+            <td>300g</td>
+            <td>48500</td>
+          </tr>
+          <tr>
+            <td>Kopi Robusta Batang</td>
+            <td>250g</td>
+            <td>46000</td>
+            <td rowspan="3">Robusta</td>
+          </tr>
+          <tr>
+            <td>Kopi Robusta Temanggung</td>
+            <td>250g</td>
+            <td>38000</td>
+          </tr>
+          <tr>
+            <td>Kopi Robusta Linggoasri</td>
+            <td>225g</td>
+            <td>35000</td>
+          </tr>
+          <tr>
+            <td>Kopi Liberika Riau</td>
+            <td>250g</td>
+            <td>42000</td>
+            <td>Liberika</td>
+          </tr>
+          <tr>
+            <td colspan="4" style="text-align: center;">Semua harga sudah termasuk PPN</td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
+
+       <br>
+<section class="box">
+      <img src="images/kemasan.png" alt="Kemasan Kopi Arabika" width="80%" /> <br>
+      <h3>Profil Produk</h3>
+        <p>
+          Kopi Nusantara menghadirkan kopi pilihan yang berasal langsung dari petani lokal di berbagai daerah Indonesia. Setiap biji kopi diproses dengan penuh perhatian, mulai dari pemetikan buah kopi matang, proses pascapanen yang terkontrol, hingga penyangraian yang disesuaikan untuk menjaga karakter rasa alaminya. Kami berkomitmen menghadirkan kopi yang segar, berkualitas, dan konsisten di setiap kemasan.
+        </p>
+        <p>
+          Dengan aroma khas, cita rasa seimbang, serta aftertaste yang bersih, kopi kami cocok dinikmati oleh berbagai kalangan, baik penikmat kopi pemula maupun pecinta kopi berpengalaman. Kopi Nusantara dapat diseduh dengan berbagai metode sesuai selera, menjadikannya pilihan tepat untuk menemani aktivitas harian maupun momen istimewa Anda.
+        </p>
+      </section>
+      br
+       
+      <h3 class="mb-4">Produk Unggulan Kami</h3>
+
+      <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="images/kopiarabikagayo"
+                class="card-img-top"
+                alt="Kopi Arabika Gayo"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kopi Arabika Gayo</h5>
+                <p class="card-text">
+                  Kopi Arabika Gayo dari dataran tinggi Aceh dengan aroma floral dan rasa
+                  asam yang lembut.
+                </p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+                <a href="#" class="btn btn-primary mt-auto">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="images/kopirobustatemanggung"
+                class="card-img-top"
+                alt="Kopi Robusta Temanggung"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kopi Robusta Temanggung</h5>
+                <p class="card-text">
+                  Kopi Robusta Temanggung dengan cita rasa pahit manis khas pegunungan
+                  Jawa Tengah.
+                </p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+                <a href="#" class="btn btn-primary mt-auto">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <img
+                src="images/kopiliberikariau"
+                class="card-img-top"
+                alt="Kopi Liberika Riau"
+              />
+              <div class="card-body flex-column text-center">
+                <h5 class="card-title">Kopi Liberika Riau</h5>
+                <p class="card-text">
+                  Kopi Liberika Riau dengan aroma kopi yang unik dan rasa bold yang sedikit
+                  fruity.
+                </p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+                <a href="#" class="btn btn-primary mt-auto">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100">
+              <img src="images/kopisemnedo.png" class="card-img-top" alt="Kopi Liberika Riau" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Kopi Excelsa Semendo</h5>
+                <p class="card-text">
+                  Kopi Excelsa Semendo dengan aroma herbal manis dan floral, berpadu rasa
+                  buah salak matang.
+                </p>
+                <p><strong>Rating Produk : </strong><span class="hasil-rating"></span></p>
+                <a href="#" class="btn btn-primary mt-auto">Beli Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const produk = [
+          { rating: 4.5, IndexCard: 0 },
+          { rating: 4, IndexCard: 1 },
+          { rating: 5, IndexCard: 2 },
+          { rating: 4.6, IndexCard: 3 }
+        ];
+
+        // Ambil semua elemen rating
+        const ratingElements = document.querySelectorAll(".hasil-rating");
+
+        produk.forEach((item, index) => {
+          let teksRating = "";
+          if (item.rating >= 4.5) {
+            teksRating = "★★★★★ Sangat Disarankan";
+          } else if (item.rating >= 3) {
+            teksRating = "★★★ Rekomendasi Biasa";
+          } else {
+            teksRating = "★ Tidak Direkomendasikan";
+          }
+
+          // Set rating ke elemen yang sesuai
+          ratingElements[item.IndexCard].textContent = teksRating;
+        });
+      </script>
+
+      <script>
+        $(document).ready(function () {
+          $(".btn-primary").click(function (e) {
+            e.preventDefault();
+            alert("Terima kasih, produk akan segera diproses!");
+          });
+        });
+      </script>
+
+
+      <section>
+                <h3>Form Pemesanan</h3>
+                  <form onsubmit="return cekform()">
+                      <label for="namaProduk">Pilih produk: </label>
+                      <select id="namaProduk">
+                          <option value="Kopi Arabika Gayo">Kopi Arabika Gayo</option>
+                          <option value="Kopi Robusta Temanggung">Kopi Robusta Temanggung</option>
+                          <option value="Kopi Liberika Riau">Kopi Liberika Riau</option>
+                      </select><br>
+
+                      <label for="jumlah">Masukan jumlah yang ingin dipesan: </label>
+                      <input type="number" id="jumlah" placeholder="Jumlah"><br>
+
+                      <button type="submit">Pesan</button>
+                  </form>
+                
+                <script>
+                    
+                    function cekform() {
+                        let nama = document.getElementById("namaProduk").value;
+                        let jumlah = document.getElementById("jumlah").value;
+
+                        if (nama === "" || jumlah === "") {
+                            alert("Semua kolom wajib diisi.");
+                            return false; // mencegah submit
+                        }
+
+                        if (jumlah <= 0) {
+                            alert("Jumlah harus lebih dari 0!");
+                            return false; // mencegah submit
+                        }
+
+                        // Alert berhasil
+                        alert("Pemesanan berhasil dikirim!\nNama produk: " + nama + "\nJumlah: " + jumlah);
+
+                        return false; // tetap mencegah reload supaya alert terlihat
+                    }
+                </script>
+            </section>
+            <br>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kopi Nusantara</p>
+    </footer>
+  </body>
 </html>

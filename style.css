@@ -38,11 +38,13 @@ nav ul li a:hover {
 h2 {
   color: #532a10;
   margin-left: 1%;
+  text-align: center;
 }
 
 h3 {
   color: #532a10;
   margin-left: 1%;
+  text-align: center;
 }
 
 p {
@@ -69,6 +71,68 @@ th {
 
 tr:hover {
   background-color: #f9f3ef;
+}
+
+main.container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+main h2 {
+  margin-top: 30px;
+}
+
+
+.box {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 850px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.box h2,
+.box h3 {
+  margin-left: 0; /* supaya tidak kepengaruh margin-left 1% dari global */
+  margin-bottom: 10px;
+  color: #532a10;
+}
+
+.box p {
+    margin-left: 0;
+  line-height: 1.7;
+}
+
+/* List fitur / testimoni */
+.box ul,
+#list-testimoni,
+#layanan-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.box ul li,
+#list-testimoni li,
+#layanan-list li {
+  background: #f9f3ef;
+  margin: 8px auto;
+  padding: 10px 14px;
+  border-radius: 6px;
+  max-width: 500px;
+}
+
+/* Form di tentang kami */
+main.container form {
+  margin-top: 15px;
+}
+
+/* Button agar konsisten */
+main.container button {
+  margin-top: 10px;
 }
 
 /* ==========================
@@ -144,6 +208,27 @@ form button[type="submit"]:hover {
   background-color: #75401b;
 }
 
+/* LOGO NAVBAR - AMAN, TIDAK BENTROK */
+.logo-navbar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* override img global */
+  display: inline-block !important;
+  margin: 0 !important;
+
+  background: #ffffff;
+  padding: 2px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+/* pastikan brand tidak nutup menu */
+.navbar-brand {
+  width: auto;
+}
+
 /* ==========================
    Styling Erorr
 ========================== */
@@ -177,41 +262,39 @@ img {
   margin: 0 auto;
 }
 
-.card {
-  flex: 1 1 250px;          /* fleksibel, minimal 250px */
-  max-width: 300px;         /* batas maksimal */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+.galeri .card {
   text-align: center;
-  padding: 10px;
+  margin: 0 auto;
+  max-width: 280px;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
+.galeri .card p {
+  margin-left: 0;        /* override margin global */
+  text-align: center;
 }
 
-/* Responsif untuk layar sedang (tablet) */
-@media (max-width: 992px) {
-  .card {
-    flex: 1 1 calc(45% - 20px); /* 2 card per baris */
-  }
+/* Deskripsi form di tengah */
+.form-desc {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Responsif untuk layar kecil (hp) */
-@media (max-width: 600px) {
-  .galeri {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    max-width: 90%;
-    flex: 1 1 100%; /* 1 card per baris */
-  }
+/* Box form */
+.form-box {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+/* Grup field */
+.form-group {
+  margin-bottom: 18px;
+}
+
+
+/* Tombol */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}

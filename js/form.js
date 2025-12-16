@@ -1,5 +1,3 @@
-import { formatPesan } from "./utils.js";
-
 document.addEventListener("DOMContentLoaded", () =>  {
     const form = document.querySelector("form");
 
